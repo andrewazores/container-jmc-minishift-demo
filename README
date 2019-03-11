@@ -22,4 +22,5 @@ For example, if "connect jmx-listener:9091; list" in your JMXClient shell
 lists a recording named "foo", and `oc status` gives you a route URL of
 http://jmx-client-myproject.10.0.0.1.nip.io , then you can download your
 recording with ex.
-`wget http://jmx-client-myproject.10.0.0.1.nip.io/foo -O foo.jfr` .
+`wget http://jmx-client-myproject.10.0.0.1.nip.io/foo -O foo.jfr`, or for
+convenience, `sh download.sh foo`, which is equivalent to the wget above.
