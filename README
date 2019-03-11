@@ -11,3 +11,15 @@ after that, see these related repositories:
 https://github.com/andrewazores/container-jmc
 https://github.com/andrewazores/container-jmc-simple-demo
 https://github.com/andrewazores/container-jmc-pubsub-demo
+
+Once you have dumped recording(s) to download from the target JVM, use
+`oc status` to view the exposed route for the svc/jmx-client service, which
+will provide you a URL pointing to the client image's recording download path
+(including the correct port). You can then download your recordings by
+appending the name of the recording to this URL.
+
+For example, if "connect jmx-listener:9091; list" in your JMXClient shell
+lists a recording named "foo", and `oc status` gives you a route URL of
+http://jmx-client-myproject.10.0.0.1.nip.io , then you can download your
+recording with ex.
+`wget http://jmx-client-myproject.10.0.0.1.nip.io/foo -O foo.jfr` .
