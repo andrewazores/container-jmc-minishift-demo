@@ -2,6 +2,10 @@
 Install Minishift: https://github.com/minishift/minishift
 (Probably also works fine with other OpenShift clusters, but this is not tested)
 
+Ensure your local Minishift cluster is running (`minishift start`) before
+continuing. Use `oc login` so that your Openshift client is correctly connected
+to your Minishift cluster.
+
 Run setup.sh to set up a Listener pod in your Minishift cluster, then run
 run.sh to run the JMXClient image beside that. From within the JMXClient shell
 that run.sh drops you into, type "connect jmx-listener:9091" to connect your
