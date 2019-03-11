@@ -10,7 +10,7 @@ function cleanup() {
 }
 
 function oc_expose() {
-    sleep 10
+    sleep 10 # TODO replace this with a proper wait for the pod to be available
     oc expose -l "$LABEL" svc/jmx-client
 }
 
