@@ -6,7 +6,7 @@ set -e
 LABEL="name=jmxclient"
 
 function cleanup() {
-    oc delete --ignore-not-found=true pods,services,routes -l "$LABEL" > /dev/null 2>&1
+    oc delete --ignore-not-found pods,services,routes -l "$LABEL" > /dev/null 2>&1
 }
 
 function oc_expose() {
