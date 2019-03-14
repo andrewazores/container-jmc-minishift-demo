@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sh run.sh "connect jmx-listener:9091; delete recording; dump recording 10 jdk.SocketRead:enabled=true,jdk.SocketWrite:enabled=true; wait-for recording; wait-for-download recording"
+sh run.sh "$(more demo)"
